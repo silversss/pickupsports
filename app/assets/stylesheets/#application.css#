@@ -1,0 +1,114 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require jquery.ui.core
+ *= require jquery.ui.theme
+ *= require dataTables/src/demo_table_jui
+ *= require_tree .
+ */
+
+
+
+
+.brand {
+    float: left;
+    padding-right: 8px;
+}
+ul.nav {
+    list-style: none;
+    margin: 0 0 2em;
+    padding: 0;
+}
+ul.nav li {
+    display: inline;
+}
+
+
+
+
+#banner {
+    display: block;
+    background: green;
+    padding: 10px;
+    border-bottom: 2px solid;
+    font: small-caps 40px/40px "Times New Roman", serif;
+    color: black;
+    text-align: center;
+
+}
+
+#banner img {
+    float: left;
+}
+
+
+#columns {
+    background: white;
+}    
+
+#side {
+    float: left;
+    padding: 1em 1em 0em 3em;
+    background: white;
+    width: 8em;
+}
+#side ul {
+    padding: 0;
+}
+#side li {
+    list-style: none;
+}
+#side a {
+    color: black;
+    font-size: small;
+}
+ 
+
+#side a:hover {
+    color:red;
+}
+
+
+
+
+#main {
+    margin-left: 17em;
+    padding: 0em 10em 2em 10em;
+    float: left;
+    background: white;
+    border-right-color: green;
+    border-right-style: solid;
+    border-left-color: green;
+    border-left-style: solid;
+    text-align: left;
+    position: relative;
+    right: 12em;
+   }
+
+div.float {
+    float: left;
+    padding: 20px;
+}
+
+div.float p {
+    text-align: left;
+}
+
+div.row {
+    clear: both;
+    padding-top: 10px;
+}
+
+div.row span.label {
+    float: left;
+    width: 100px;
+    text-align: right;
+}

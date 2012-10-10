@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @game.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @game.address %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @game.time %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @game.status %>
+</p>
+
+<p>
+  <b>Private:</b>
+  <%= @game.private %>
+</p>
+
+<p>
+  <b>Sport:</b>
+  <%= @game.sport %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @game.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @game.longitude %>
+</p>
+
+<p>
+  <b>Gmaps:</b>
+  <%= @game.gmaps %>
+</p>
+
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>

@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %> |
+<%= link_to 'Delete', @game, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+
+
+<p>
+  <b>Name:</b>
+  <%= @game.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @game.address %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @game.time %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @game.status %>
+</p>
+
+<p>
+  <b>Private:</b>
+  <%= @game.private %>
+</p>
+
+<p>
+  <b>Sport:</b>
+  <%= @game.sport %>
+</p>
+
+
+<%= gmaps4rails(@json) %>
+

@@ -1,0 +1,3 @@
+class Game < ActiveRecord::Base
+  attr_accessible :address, :gmaps, :latitude, :longitude, :name, :private, :sport, :status, :time
+end

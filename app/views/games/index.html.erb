@@ -1,0 +1,36 @@
+<h1>Games Around You</h1>
+
+
+
+
+
+<table id="games" class="display">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Time</th>
+      <th>Status</th>
+      <th>Private</th>
+      <th>Sport</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @games.each do |game| %>
+    <tr>
+      <td><%= link_to game.name, game %></td>
+      <td><%= game.address %></td>
+      <td><%= game.time.httpdate %></td>
+      <td><%= game.status %></td>
+      <td><%= game.private %></td>
+      <td><%= game.sport %></td>
+      <td><%= link_to game.name, game %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Game', new_game_path %>

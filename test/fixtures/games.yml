@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  address: MyString
+  time: 2012-09-25 22:49:13
+  status: MyString
+  private: false
+  sport: MyString
+  latitude: 1.5
+  longitude: 1.5
+  gmaps: false
+
+two:
+  name: MyString
+  address: MyString
+  time: 2012-09-25 22:49:13
+  status: MyString
+  private: false
+  sport: MyString
+  latitude: 1.5
+  longitude: 1.5
+  gmaps: false
