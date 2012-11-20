@@ -10,8 +10,7 @@ class CreateGames < ActiveRecord::Migration
       t.float :latitude
       t.float :longitude
       t.boolean :gmaps
-      t.string :member_id
-      t.string :admin_id
+     
 
       t.timestamps
     end
