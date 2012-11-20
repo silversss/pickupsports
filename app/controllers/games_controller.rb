@@ -2,7 +2,7 @@ class GamesController < ApplicationController
   # GET /games
   # GET /games.json
   def index
-    @games = Game.all(:conditions => ["time > ?" , Time.now])
+    @games = Game.all(:conditions => ["time > ? AND not private" , Time.now])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,6 +15,7 @@ class GamesController < ApplicationController
   def show
     @game = Game.find(params[:id])
     @json = Game.find(params[:id]).to_gmaps4rails
+    @tag = @game.members.member?(current_user)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -27,6 +28,7 @@ class GamesController < ApplicationController
   def new
     @game = Game.new
     @user = current_user
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @game }
@@ -35,7 +37,7 @@ class GamesController < ApplicationController
 
   # GET /games/1/edit
   def edit
-    @game = Game.find(params[:id])
+   @game = Game.find(params[:id])
   end
 
   # POST /games
@@ -43,6 +45,7 @@ class GamesController < ApplicationController
   def create
     @user = current_user
     @game = Game.new(params[:game])
+    @game.admin = @user
 
     respond_to do |format|
       if @game.save
